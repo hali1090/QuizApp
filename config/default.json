@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://hamilton:hamilton@quizapp.niajs.mongodb.net/<dbname>?retryWrites=true&w=majority"
+}
