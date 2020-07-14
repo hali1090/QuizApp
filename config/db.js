@@ -6,7 +6,7 @@ const connectDB = async () => {
   try {
     await mongoose.connect(db, {
       useNewURLParser: true,
-      userCreateIndex: true,
+      useCreateIndex: true,
     });
     // Display a confirmation on mongodb connection
     console.log("MongoDB Connected...");
