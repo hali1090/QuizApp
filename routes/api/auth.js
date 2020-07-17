@@ -9,7 +9,7 @@ const { check, validationResult } = require('express-validator/check');
 const User = require('../../models/User');
 
 // @route   GET api/auth
-// @desc    Test route
+// @desc    Get an authenticated user
 // @access  Public
 router.get('/', auth, async (req, res) => {
   try {
@@ -39,7 +39,7 @@ router.post(
     const { email, password } = req.body;
 
     try {
-      // See if the user exists
+      // Check if the user exists
       let user = await User.findOne({ email });
 
       if (!user) {

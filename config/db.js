@@ -5,6 +5,7 @@ const db = config.get('mongoURI');
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
+      // Added to stop mongoose depracation errors in terminal
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
