@@ -9,12 +9,40 @@ const QuizSchema = new mongoose.Schema({
     required: true,
   },
   user: {
-    type: Object,
+    type: mongoose.Schema.ObjectId,
+    ref: 'users',
     required: true,
   },
-  questions: {
-    type: Object,
+  /* questions: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'questions',
     required: true,
+  }, */
+
+  questions: [
+    {
+      questionId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'questions',
+      },
+      questionText: {
+        type: mongoose.Schema.String,
+        required: true,
+      },
+      questionResponses: {
+        type: Array,
+        required: true,
+      },
+      questionResults: {
+        type: Array,
+        required: true,
+      },
+    },
+  ],
+
+  date: {
+    type: Date,
+    default: Date.now,
   },
 });
 
