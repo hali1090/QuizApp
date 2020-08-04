@@ -8,7 +8,7 @@ export const Landing = () => {
         <div className='landing-inner'>
           <h1 className='x-large'>QuizApp!</h1>
           <p className='lead'>
-            QuizApp is a place where you can take part in and even create your
+            QuizApp is a place where you can take part in, and even create your
             own quizzes!
           </p>
           <div className='buttons'>
