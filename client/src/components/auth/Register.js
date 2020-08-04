@@ -2,11 +2,13 @@ import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
+import { register } from '../../actions/auth';
+
 import PropTypes from 'prop-types';
 
 import axios from 'axios';
 
-const Register = (props) => {
+const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,7 +25,7 @@ const Register = (props) => {
     e.preventDefault();
     if (password !== password2) {
       //console.log('Passwords do not match');
-      props.setAlert('Passwords do not match', 'danger');
+      setAlert('Passwords do not match', 'danger');
     } else {
       /* const newUser = {
         name,
@@ -46,7 +48,7 @@ const Register = (props) => {
         console.error(err.response.data);
       } */
 
-      console.log('SUCCESS');
+      register({ name, email, password });
     }
   };
 
@@ -64,7 +66,7 @@ const Register = (props) => {
             name='name'
             value={name}
             onChange={(e) => onChange(e)}
-            required
+            //required
           />
         </div>
         <div className='form-group'>
@@ -74,7 +76,7 @@ const Register = (props) => {
             name='email'
             value={email}
             onChange={(e) => onChange(e)}
-            required
+            //required
           />
           <small className='form-text'>
             This site uses Gravatar so if you want a profile image, use a
@@ -111,6 +113,7 @@ const Register = (props) => {
 };
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
 };
 
-export default connect(null, { setAlert })(Register);
+export default connect(null, { setAlert, register })(Register);
