@@ -28,9 +28,7 @@ const Dashboard = ({
         <Fragment>
           <DashboardActions />
 
-          <div></div>
-
-          <div classNAme='my-2'>
+          <div className='my-2'>
             <button className='btn btn-danger' onClick={() => deleteAccount()}>
               <i class='fas fa-user-slash'></i> Delete Account
             </button>

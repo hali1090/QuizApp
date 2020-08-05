@@ -24,6 +24,9 @@ export const getCurrentProfile = () => async (dispatch) => {
     });
   }
 };
+
+// Get all user profiles
+
 // Create/Update profile
 export const createProfile = (formData, history, edit = false) => async (
   dispatch
