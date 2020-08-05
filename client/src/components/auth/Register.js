@@ -6,7 +6,8 @@ import { register } from '../../actions/auth';
 
 import PropTypes from 'prop-types';
 
-import axios from 'axios';
+// Used for testing
+//import axios from 'axios';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -27,6 +28,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       //console.log('Passwords do not match');
       setAlert('Passwords do not match', 'danger');
     } else {
+      // Used for testing
+
       /* const newUser = {
         name,
         email,
