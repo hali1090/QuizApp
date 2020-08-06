@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import axios from 'axios';
+// Was using axios for testing
+//import axios from 'axios';
 import { connect } from 'react-redux';
 import { login } from '../../actions/auth';
 

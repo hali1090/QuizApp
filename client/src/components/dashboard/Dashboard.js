@@ -14,7 +14,7 @@ const Dashboard = ({
 }) => {
   useEffect(() => {
     getCurrentProfile();
-  }, []);
+  }, [getCurrentProfile]);
   return loading && profile === null ? (
     <Spinner />
   ) : (
@@ -27,6 +27,9 @@ const Dashboard = ({
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
+          <Link to='/create-quiz' className='btn btn-primary my-1'>
+            Create A Quiz!
+          </Link>
 
           <div className='my-2'>
             <button className='btn btn-danger' onClick={() => deleteAccount()}>

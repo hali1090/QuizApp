@@ -30,7 +30,7 @@ const EditProfile = ({
       twitter: loading || !profile.social ? '' : profile.twitter,
       instagram: loading || !profile.social ? '' : profile.instagram,
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
 
   const { location, bio, facebook, instagram, twitter } = formData;
 

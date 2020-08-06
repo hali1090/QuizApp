@@ -8,6 +8,18 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
+        <Link to='/quizzes'>
+          <i class='fas fa-question-circle'></i>{' '}
+          <span className='hide-sm'>Quizzes!</span>
+        </Link>
+      </li>
+      <li>
+        <Link to='/profiles'>
+          <i class='fas fa-users'></i>{' '}
+          <span className='hide-sm'>Other Users</span>
+        </Link>
+      </li>
+      <li>
         <Link to='/dashboard'>
           <i class='fas fa-user'></i> <span className='hide-sm'>Dashboard</span>
         </Link>
@@ -23,11 +35,6 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-      <li>
-        <Link to='#!'>
-          <i class='fas fa-users'></i> Other Users
-        </Link>
-      </li>
       <li>
         <Link to='/register'>Join!</Link>
       </li>
