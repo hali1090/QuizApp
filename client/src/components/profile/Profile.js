@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
+import ProfileTop from './ProfileTop';
+import ProfileAbout from './ProfileAbout';
 import { getUserIdProfile, getAllProfiles } from '../../actions/profile';
 
 const Profile = ({
@@ -20,17 +22,20 @@ const Profile = ({
         <Spinner />
       ) : (
         <Fragment>
-          <Link to='/profile>' className='btn btn-light'>
-            {' '}
-            Back To All Profile
+          <Link to='/profiles' className='btn btn-light'>
+            Back To All Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
             auth.user._id === profile.user._id && (
-              <Link to='/adit-profile' className='btn btn-dark'>
+              <Link to='/edit-profile' className='btn btn-dark'>
                 Edit My Profile
               </Link>
             )}
+          <div class='profile-grid my-1'>
+            <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
+          </div>
         </Fragment>
       )}
     </Fragment>
