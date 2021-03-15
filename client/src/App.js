@@ -6,6 +6,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
+import Feedback from './components/feedback/feedback'
 import CreateProfile from './components/profile-form/CreateProfile';
 import EditProfile from './components/profile-form/EditProfile';
 import Profiles from './components/profiles/Profiles';
@@ -18,6 +19,7 @@ import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
+import feedback from './components/feedback/feedback';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -41,6 +43,7 @@ const App = () => {
               <Route exact path='/login' component={Login} />
               <Route exact path='/profile/:id' component={Profile} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
+              <PrivateRoute exact path='/feedback' component={feedback} />
               <PrivateRoute
                 exact
                 path='/create-profile'

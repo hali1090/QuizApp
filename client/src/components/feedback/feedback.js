@@ -1,16 +1,25 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Spinner from '../layout/Spinner';
 import { connect } from 'react-redux';
 import { sendFeedback } from '../../actions/feedback';
 
-<Fragment>
+const feedback = ({ isAuthenticated }) => {
+  if (isAuthenticated) {
+    return  <Fragment>
+    <Link to='/dashboard' className='btn btn-primary my-1'>
+      Go back to my profile
+    </Link>
+    </Fragment>
+  }};
 
-<Link to='/results' className='btn btn-primary my-1'>
-            Click to view results.
-          </Link>
-          <Link to='/profile' className='btn btn-primary my-1'>
-            Click to go back to your profile.
-          </Link>
+feedback.propTypes = {
+  isAuthenticated: PropTypes.bool,
+};
 
-</Fragment>
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps)(feedback);
