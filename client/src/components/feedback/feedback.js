@@ -11,6 +11,9 @@ const feedback = ({ isAuthenticated }) => {
     <Link to='/dashboard' className='btn btn-primary my-1'>
       Go back to my profile
     </Link>
+    <Link to='/results' className='btn btn-primary my-1'>
+      Click to see the results of the survey
+    </Link>
     </Fragment>
   }};
 
