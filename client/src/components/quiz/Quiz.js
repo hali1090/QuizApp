@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const quiz = (props) => {
   return <div>
-    <h1 id='question' className='large text-primary'>
+    <h1 id='question' >
 
 </h1>
   
@@ -57,14 +57,16 @@ async function sendApiRequest(){
 
 function CheckCorrect(){
   const correctButton = document.querySelector("#answer1")
+  const incorrectButton = document.querySelector('#answer2', '#answer3', '#answer4')
 correctButton.addEventListener("click",()=>{
   alert('Correct!')
   sendApiRequest()
 })
+incorrectButton.addEventListener("click",()=>{
+  alert('Sorry that was incorrect')
+  sendApiRequest()
+})
 }
-
-
-
 
 quiz.propTypes = {};
 
