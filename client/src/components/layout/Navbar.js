@@ -8,7 +8,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/quiz'>
+        <Link to='/quizselect'>
           <i class='fas fa-question-circle'></i>{' '}
           <span className='hide-sm'>Quizzes!</span>
         </Link>

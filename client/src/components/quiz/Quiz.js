@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const quiz = (props) => {
   return <div>
+    <Link to='/quizselect' className='btn btn-primary my-1'>
+            Select a quiz.
+          </Link>
     <h1 id='question' >
 
 </h1>
@@ -29,6 +33,7 @@ const quiz = (props) => {
       
     </button>
     </div>;
+    
 };
 
 window.onload = sendApiRequest

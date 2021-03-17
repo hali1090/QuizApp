@@ -7,6 +7,8 @@ import Register from './components/auth/Register';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import Quiz from './components/quiz/Quiz';
+import TrueFalse from './components/quiz/TrueFalse';
+import QuizSelect from './components/quiz/QuizSelect';
 import Feedback from './components/feedback/feedback';
 import Results from './components/feedback/results';
 import CreateProfile from './components/profile-form/CreateProfile';
@@ -45,6 +47,8 @@ const App = () => {
               <Route exact path='/login' component={Login} />
               <Route exact path='/profile/:id' component={Profile} />
               <Route exact path='/quiz' component={Quiz}/>
+              <Route exact path='/quizselect' component={QuizSelect}/>
+              <Route exact path='/truefalse' component={TrueFalse}/>
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
               <PrivateRoute exact path='/feedback' component={Feedback} />
               <PrivateRoute exact path='/results' component={Results}/>
