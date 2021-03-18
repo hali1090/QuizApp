@@ -1,3 +1,4 @@
+// This file is unused but i'm scared of deleting it 
 window.onload = sendApiRequest
 
 async function sendApiRequest(){

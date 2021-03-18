@@ -1,4 +1,4 @@
-
+// This file is unused but i'm scared of deleting it 
 
 function sendVote(choiceID){
 var request = new XMLHttpRequest();
