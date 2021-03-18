@@ -6,6 +6,7 @@ const truefalse = props =>{
     <Link to='/quizselect' className='btn btn-primary my-1'>
             Select a quiz.
           </Link>
+          <button onClick={sendApiRequest} className='btn btn-primary my-1'>Get a Question</button> 
     <h1 id='question' >
 
 </h1>

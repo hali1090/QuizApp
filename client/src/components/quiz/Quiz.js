@@ -7,6 +7,7 @@ const quiz = (props) => {
     <Link to='/quizselect' className='btn btn-primary my-1'>
             Select a quiz.
           </Link>
+          <button onClick={sendApiRequest} className='btn btn-primary my-1'>Get a Question</button> 
     <h1 id='question' >
 
 </h1>
@@ -33,12 +34,10 @@ const quiz = (props) => {
       
     </button>
     </div>;
-    
-};
 
-window.onload = sendApiRequest
-
-async function sendApiRequest(){
+    async function sendApiRequest(){
+  //getQuestion()
+  console.clear()
   let response = await fetch('https://opentdb.com/api.php?amount=1&category=21&difficulty=easy&type=multiple');
   console.log(response)
   let data = await response.json()
@@ -72,6 +71,14 @@ incorrectButton.addEventListener("click",()=>{
   sendApiRequest()
 })
 }
+};
+
+//window.onload = sendApiRequest
+//window.onload = getQuestion()
+
+
+
+
 
 quiz.propTypes = {};
 
