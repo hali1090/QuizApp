@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import Spinner from '../layout/Spinner';
+//import { Link } from 'react-router-dom';
+//import Spinner from '../layout/Spinner';
 import { connect } from 'react-redux';
-import { sendFeedback } from '../../actions/feedback';
-import { sendVote } from '../../actions/poll.js';
+// import { sendFeedback } from '../../actions/feedback';
+// import { sendVote } from '../../actions/poll.js';
 import { post } from 'request';
 
 // const feedback = ({ isAuthenticated }) => {

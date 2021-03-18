@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Spinner from '../layout/Spinner';
+//import Spinner from '../layout/Spinner';
 import { connect } from 'react-redux';
-import { getResults } from '../../actions/feedback';
+//import { getResults } from '../../actions/feedback';
 
 
 const results = ({ isAuthenticated }) => {
