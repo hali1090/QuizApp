@@ -18,7 +18,7 @@ const Profiles = ({ getAllProfiles, profile: { profiles, loading } }) => {
         <Fragment>
           <h1 className='large text-primary'>Other User!</h1>
           <p className=''>
-            Here you can find other users and take their quizzes!
+            Here you can find other users!
           </p>
           <div className='profiles'>
             {profiles.length > 0 ? (

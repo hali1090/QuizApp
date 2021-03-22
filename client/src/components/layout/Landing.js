@@ -14,8 +14,7 @@ const Landing = ({ isAuthenticated }) => {
         <div className='landing-inner'>
           <h1 className='x-large'>QuizApp!</h1>
           <p className='lead'>
-            QuizApp is a place where you can take part in, and even create your
-            own quizzes!
+            QuizApp is a place where you can take part in quizzes!
           </p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-primary'>

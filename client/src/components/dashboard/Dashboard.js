@@ -27,9 +27,9 @@ const Dashboard = ({
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
-          <Link to='/create-quiz' className='btn btn-primary my-1'>
+          {/* <Link to='/create-quiz' className='btn btn-primary my-1'>
             Create A Quiz!
-          </Link>
+          </Link> */}
           <Link to='/feedback' className='btn btn-primary my-1'>
             Click to vote on your favourite quiz!
           </Link>
